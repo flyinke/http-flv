@@ -1,6 +1,8 @@
-FROM nginx:1.16.1-alpine
+FROM nginx:1.20.1-alpine
 
-ENV NGINX_HTTP_FLV_MODULE_VERSION 1.2.6
+ENV NGINX_HTTP_FLV_MODULE_VERSION 1.2.9
+
+RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.ustc.edu.cn/g' /etc/apk/repositories
 
 RUN CONFIG="\
     --prefix=/etc/nginx \
