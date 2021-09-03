@@ -119,3 +119,20 @@ http://host[:port]/live?app=demo&stream=stream-1
 [flv.js](https://github.com/bilibili/flv.js)
 
 [docker-nginx](https://github.com/nginxinc/docker-nginx)
+
+---
+
+docker build -t live-img:0.1 .
+docker run --rm -it -p 8808:80 -p 1935:1935 live-img:0.1
+
+推流地址
+rtmp://127.0.0.1/demo/stream-1
+
+osb设置 服务器：rtmp://127.0.0.1/demo，串流密钥：stream-1
+
+拉流地址
+http://127.0.0.1:8808/live?app=demo&stream=stream-1
+
+减小延迟
+- 关闭gop_cache 
+- ob推流关键帧设置小一点，例如2秒
