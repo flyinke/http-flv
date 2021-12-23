@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>VLC Web Plugin RTMP DEMO</title>
+</head>
+<body>
+<h1>VLC Web Plugin RTMP DEMO</h1>
+<object classid="clsid:9BE31822-FDAD-461B-AD51-BE1D1C159921"
+        codebase="http://download.videolan.org/pub/videolan/vlc/last/win32/axvlc.cab"
+        style="width: 640px; height: 480px;">
+    <param name="src" value="http://127.0.0.1:8808/live?app=demo&stream=stream-1"/>
+    <param name="controls" value="true" />
+    <param name="autostart" value="true"/>
+    <embed type="application/x-vlc-plugin" pluginspage="http://www.videolan.org"
+           width="640px"
+           height="480px"
+           src="http://127.0.0.1:8808/live?app=demo&stream=stream-1"/>
+</object>
+</body>
+</html>
