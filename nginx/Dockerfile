@@ -1,6 +1,6 @@
 FROM nginx:1.20.1-alpine
 
-ENV NGINX_HTTP_FLV_MODULE_VERSION 1.2.9
+ENV NGINX_HTTP_FLV_MODULE_VERSION 1.2.11
 
 RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.ustc.edu.cn/g' /etc/apk/repositories
 

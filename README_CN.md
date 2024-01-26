@@ -136,3 +136,9 @@ http://127.0.0.1:8808/live?app=demo&stream=stream-1
 减小延迟
 - 关闭gop_cache 
 - ob推流关键帧设置小一点，例如2秒
+
+
+推送到docker hub
+docker build -t http-flv:0.3 .
+docker tag http-flv:0.3 flyinke/http-flv:0.3
+docker push flyinke/http-flv:0.3
